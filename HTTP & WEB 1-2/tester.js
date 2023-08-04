@@ -7,7 +7,7 @@ if (process.argv.length != 4) {
 const inputs = {
     1: `hello`,
     2: `POST /doc/test HTTP/1.1
-HOST: shpp.me
+Host: shpp.me
 Accept: image/gif, image/jpeg, */*
 Accept-Language: en-us
 Accept-Encoding: gzip, deflate
