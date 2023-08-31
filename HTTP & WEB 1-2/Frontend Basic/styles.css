@@ -1,0 +1,182 @@
+h1 {
+  text-align: center;
+  font-size: 35px;
+  font-family: 'Gluten', cursive;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-family: 'Vollkorn', serif;
+  text-align: center;
+  font-size: 25px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+
+}
+
+h3 {
+  font-family: 'Gluten', cursive;
+  text-align: left;
+  font-weight: bold;
+  font-size: 25px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  color: #090250;
+  max-width: 100%;
+ }
+
+p {
+  font-family: 'Vollkorn', serif;
+  font-weight: bold;
+  font-size: 25px;
+  margin-right: 15px;
+  margin-left: 15px;
+  color: #2c0b5c;
+}
+
+td {
+  font-size: 15px;
+  font-family: 'Verdana', Sans-serif;
+  font-weight: bold;
+  color: rgb(79, 82, 82);
+  text-align: left;
+  height: 80px;
+  vertical-align: top;
+  max-width: 100%;
+  min-width: 1%;
+  font-stretch: 10%;
+  
+  }
+
+  @media screen and (max-width:500px) {
+    td {font-size: 10px;}
+    h3 {font-size: 15px;}
+    a {font-size: 10px;}
+    p {font-size: 15px;}
+ }
+
+table {
+
+  width: 100%;
+  border: 1px solid;
+  border-color: rgba(96, 158, 246, 0.8);
+  max-width: 100%;
+  min-width: none;
+  
+}
+
+
+html {
+  background: url(image1.jpg) no-repeat center fixed;
+  background-size: cover;
+}
+
+img {
+
+  border-radius: 10px;
+  width: 160px;
+  height: 170px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: -15px;
+  float: right;
+  border-style: solid;
+  border-width: 5px;
+  border-color: rgb(244, 247, 244);
+}
+
+.aboutDirection {
+
+  background-color: rgb(175, 232, 252, 0.8);
+  margin: 20px;
+  padding: 20px;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 10px;
+
+}
+
+
+.b-row {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.b-col {
+  width: calc(50%);
+
+}
+
+@media screen and (max-width: 1000px) {
+  .b-col {
+    width: calc(50%);
+  }
+}
+
+.aboutExperience {
+  background-color: rgba(96, 158, 246, 0.8);
+  border: 2px solid rgb(255, 255, 255);
+  margin: 20px;
+  padding: 10px;
+  border-radius: 10px;
+
+}
+
+
+.additionalInfo {
+  background-color: rgb(205, 209, 115, 0.8);
+  border: 2px solid rgb(255, 255, 255);
+  margin: 20px;
+  padding: 10px;
+  border-radius: 10px;
+
+}
+
+.contacts {
+  background-color: rgba(75, 156, 50, 0.8);
+  border: 2px solid rgb(248, 248, 247);
+  margin: 20px;
+  padding: 10px;
+  border-radius: 10px;
+
+}
+
+.parrent {
+  width: 100%;
+  height: 10px;
+  background: #f2f2f2;
+  margin-right: 5px;
+  text-align: center;
+}
+
+.child {
+  height: 100%;
+  background: #5176a7;
+  border-bottom-right-radius: 10px;
+  text-align: center;
+}
+
+.javascript {
+  width: 70%;
+}
+
+.nodejs {
+  width: 48%;
+}
+
+.typescript {
+  width: 25%;
+}
+
+.html {
+  width: 55%;
+}
+
+.css {
+  width: 55%;
+}
+
+.codereview {
+  width: 95%;
+}
