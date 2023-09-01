@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/3bcf7cbd65.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Gluten&family=Sedgwick+Ave+Display&family=Vollkorn&display=swap"
+        rel="stylesheet">
+    <title> Practice Frontend JS 1-4</title>
+</head>>
+
+<body>
+    
+    <div class="flex-container">
+        <button id="Button1">Button1</button>
+        <button id="Button2">Button2</button>
+        <button id="Button3">Button3</button>
+    </div>
+
+    <div id="blackBox"></div>
+
+    <script>
+        document.getElementById("Button1").addEventListener("click", myFunction1);
+
+        function myFunction1() {
+            document.getElementById("blackBox").style.display = "none";
+
+        }
+    </script>
+
+</body>
+
+</html>
