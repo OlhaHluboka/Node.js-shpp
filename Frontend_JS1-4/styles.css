@@ -7,7 +7,9 @@
     margin-top: 150px;
    
 }
-
+.hidden {
+    visibility: hidden;
+}
 .flex-container {
     display: flex;
     justify-content: center;
