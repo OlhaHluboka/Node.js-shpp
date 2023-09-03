@@ -15,11 +15,12 @@
 </head>>
 
 <body>
-    
+
     <div class="flex-container">
         <button id="Button1">Button1</button>
         <button id="Button2">Button2</button>
         <button id="Button3">Button3</button>
+        <button id="Box/NotBox">Box/NotBox</button>
     </div>
 
     <div id="blackBox"></div>
@@ -41,11 +42,24 @@
         document.getElementById("Button3").addEventListener("click", myFunction3);
 
         function myFunction3() {
-           const box = document.getElementById("blackBox");
-           box.classList.add("hidden");
+            const box = document.getElementById("blackBox");
+            box.classList.add("hidden");
         }
 
-       
+        document.getElementById("Box/NotBox").addEventListener("click", myFunction4);
+
+        function myFunction4() {
+            const box = document.getElementById("blackBox");
+
+            if (box.style.visibility !== "hidden") {
+
+                box.style.visibility = "hidden";
+            } else {
+                box.style.visibility = "visible";
+            }
+        }
+
+
     </script>
 
 </body>
