@@ -51,12 +51,8 @@
         function myFunction4() {
             const box = document.getElementById("blackBox");
 
-            if (box.style.visibility !== "hidden") {
+            box.style.visibility !== "hidden" ? box.style.visibility = "hidden" : box.style.visibility = "visible"
 
-                box.style.visibility = "hidden";
-            } else {
-                box.style.visibility = "visible";
-            }
         }
 
 
