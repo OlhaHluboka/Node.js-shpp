@@ -21,9 +21,19 @@
         <button id="Button2">Button2</button>
         <button id="Button3">Button3</button>
         <button id="Box/NotBox">Box/NotBox</button>
+        <button id="Bxs">Boxes</button>
     </div>
 
     <div id="blackBox"></div>
+
+    <div class="flex-container1" id="boxes">
+        <div id="box1"></div>
+        <div id="box2"></div>
+        <div id="box3"></div>
+        <div id="box4"></div>
+        <div id="box5"></div>
+        
+    </div>
 
     <script>
         document.getElementById("Button1").addEventListener("click", myFunction1);
@@ -50,6 +60,15 @@
 
         function myFunction4() {
             const box = document.getElementById("blackBox");
+
+            box.style.visibility !== "hidden" ? box.style.visibility = "hidden" : box.style.visibility = "visible"
+
+        }
+
+        document.getElementById("Bxs").addEventListener("click", myFunction5);
+
+        function myFunction5() {
+            const box = document.getElementById("boxes");
 
             box.style.visibility !== "hidden" ? box.style.visibility = "hidden" : box.style.visibility = "visible"
 
