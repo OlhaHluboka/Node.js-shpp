@@ -5,28 +5,29 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 100px;
-          
-   
 }
+
 .hidden {
     visibility: hidden;
-    
+
 }
+
 .flex-container {
     display: flex;
     justify-content: center;
 }
 
-.flex-container > button {
+.flex-container>button {
     background-color: #f46cd6;
-    border: 5px solid rgb(66, 65, 65);
-    border-radius: 50%;
+    border: 2px solid rgb(66, 65, 65);
+    border-radius: 30px;
     color: white;
     padding: 15px 32px;
     text-align: center;
     font-size: 16px;
     cursor: pointer;
     margin: 10px;
+    box-shadow: 0 -3px rgb(33, 87, 60) inset;
 }
 
 .flex-container1 {
@@ -34,11 +35,31 @@
     justify-content: center;
 }
 
-.flex-container1 > div {
+.flex-container1>div {
     height: 100px;
     width: 100px;
     background-color: black;
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 150px;
+}
+
+label {
+    font-family: 'Vollkorn', serif;
+    text-align: center;
+    font-size: 25px;
+    color: #420475;
+}
+
+.button {
+    background-color: #f46cd6;
+    border: 2px solid rgb(66, 65, 65);
+    border-radius: 30px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px;
+    box-shadow: 0 -3px rgb(33, 87, 60) inset;
 }

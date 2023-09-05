@@ -32,8 +32,15 @@
         <div id="box3"></div>
         <div id="box4"></div>
         <div id="box5"></div>
-        
+
     </div>
+
+    <div>
+        <label style="font-family: 'Vollkorn', serif; font-size: 25px;"> CSS Selector</label> : <br>
+        <input type="text" id="userInput" style="font-family: 'Vollkorn', serif; font-size: 25px;">
+        <input type="submit"  id="submt" value="Submit" class="button">
+    </div>
+
 
     <script>
         document.getElementById("Button1").addEventListener("click", myFunction1);
@@ -73,6 +80,21 @@
             box.style.visibility !== "hidden" ? box.style.visibility = "hidden" : box.style.visibility = "visible"
 
         }
+
+        document.getElementById("submt").addEventListener("click", myFunction6);
+
+        function myFunction6() {
+            let nameOfSelector = document.getElementById("userInput").value;
+
+            if (nameOfSelector === ".button") return null;
+
+            let element = document.querySelector(nameOfSelector);
+           
+
+            element.style.visibility !== "hidden" ? element.style.visibility = "hidden" : element.style.visibility = "visible"
+           
+        }
+
 
 
     </script>
