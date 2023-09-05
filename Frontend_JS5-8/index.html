@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/3bcf7cbd65.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Gluten&family=Sedgwick+Ave+Display&family=Vollkorn&display=swap"
+        rel="stylesheet">
+    <title> Practice Frontend JS 1-4</title>
+</head>>
+
+<body>
+
+    <div class="yellowBox" id="yB">
+    </div>
+    <div class="redBox" id="rB">
+    </div>
+
+    <div class="flex-container" id="rBtn">
+        <button id="rBB">Red Box Button</button>
+
+    </div>
+
+    <div class="redBox" id="gB" style="background-color: green; border: 2px solid green; height: 20px;
+    visibility: hidden;">
+    </div>
+
+    <div class="flex-container1" id="inpt">
+        <div style="background-color: white;">
+            <input type="text" id="userTxt" style="font-family: 'Vollkorn', serif; font-size: 25px; margin-top: 10px;">
+        </div>
+
+    </div>
+
+    <div class="flex-container1" id="inpt1">
+        <div style="background-color: white; margin-top: -20px;">
+            <input type="text" id="href" style="font-family: 'Vollkorn', serif; font-size: 25px;">
+            <input type="submit" id="submt" value="Submit" class="button">
+        </div>
+    </div>
+
+    <div class="flex-container2" id="img" >
+        <img src="grape.jpg" alt="Green grape" id="image1">
+        <img src="boat.jpg" alt="Boat to hot" id="image2">
+        <img src="radish.jpg" alt="Boat to hot" id="image3">
+
+    </div>
+
+
+    <script>
+
+        /* TASK 5 */
+        let x = document.getElementById("yB");
+        x.addEventListener("click", firstFunction);
+        x.addEventListener("click", secondFunction);
+
+        function firstFunction() {
+            alert("Hello World!");
+        }
+
+        function secondFunction() {
+            document.getElementById("yB").style.visibility = "hidden";
+        }
+
+        /* TASK 6 */
+
+        let event = document.getElementById("rBB");
+        event.addEventListener("mouseover", myFunction);
+        event.addEventListener("mouseout", mySecondFunction);
+
+        function myFunction() {
+            document.getElementById("rB").style.visibility = "hidden";
+        }
+
+        function mySecondFunction() {
+            document.getElementById("rB").style.visibility = "visible";
+        }
+
+        /* TASK 7 */
+
+        let event1 = document.getElementById("userTxt");
+        event1.addEventListener("mouseover", myFunction1);
+        event1.addEventListener("input", mySecondFunction1);
+
+        function myFunction1() {
+            document.getElementById("gB").style.visibility = "visible";
+        }
+
+        function mySecondFunction1() {
+            document.getElementById("gB").style.visibility = "hidden";
+        }
+
+        /* TASK 8 */
+
+        document.getElementById("submt").addEventListener("click", myFunction6);
+
+        function myFunction6() {
+            let text = document.getElementById("href").value; // image1, image2
+            let elem = document.getElementById(text);
+            elem.style.visibility = "visible";
+        }
+
+    </script>
+
+</body>
+
+</html>

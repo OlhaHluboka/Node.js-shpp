@@ -1,0 +1,92 @@
+.yellowBox {
+    height: 100px;
+    width: 100px;
+    background-color: rgb(236, 221, 13);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    border: 2px solid rgb(191, 148, 6);
+}
+
+.redBox {
+    height: 50px;
+    width: 50px;
+    background-color: rgb(239, 15, 15);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    border: 2px solid rgb(201, 34, 34);
+}
+
+.button {
+    background-color: #f46cd6;
+    border: 2px solid rgb(66, 65, 65);
+    border-radius: 30px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 10px;    
+    box-shadow: 0 -3px rgb(33, 87, 60) inset;
+   
+}
+
+.hidden {
+    visibility: hidden;
+
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+}
+
+.flex-container>button {
+    background-color: #f46cd6;
+    border: 2px solid rgb(66, 65, 65);
+    border-radius: 30px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px;
+    box-shadow: 0 -3px rgb(33, 87, 60) inset;
+}
+
+.flex-container1 {
+    display: flex;
+    justify-content:center;
+}
+
+.flex-container1>div {
+    height: 100px;
+    width: 100px;
+    background-color: black;
+    margin: 10px;
+  
+}
+
+label {
+    font-family: 'Vollkorn', serif;
+    text-align: center;
+    font-size: 25px;
+    color: #420475;
+}
+
+.flex-container2 {
+    display: flex;
+    justify-content: left;
+}
+
+
+.flex-container2>img {
+    height: 250px;
+    width: 150px;
+    margin: 10px;
+    visibility: hidden;
+   
+}
+
+
