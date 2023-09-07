@@ -18,13 +18,23 @@
 <body onmousemove="showCoords(event)">
 
     <div class="flex-container1" id="blocks">
-        <div class="rightBlock" id="Coord" > 
-            <p id="text1" style="text-align:center">
+        <div class="rightBlock" id="Coord">
+            <p id="text1" style="text-align:center; margin-top: auto;">
                 Coordinates
             </p>
         </div>
-        <div class="rightBlock" id="Lang"> </div>
-        <div class="rightBlock" id="Man"> </div>
+        <div class="rightBlock" id="Lang">
+            <p id="text2" style="text-align:center; margin-top: auto;">
+                User language
+            </p>
+        </div>
+
+        <div class="rightBlock" id="Man" onmousemove="functionGeo(pos)">
+
+            <p id="text3" style="text-align:center; margin-top: auto;">
+                Latitude & Longitude
+            </p>
+        </div>
     </div>
 
     <label> IMAGES </label> <br>
@@ -64,16 +74,36 @@
             }
         }
 
-        /* TASK 10 */
+        /* TASK 10 - 11 */
         function showCoords(evt) {
 
             let x = evt.clientX;
             let y = evt.clientY;
 
-            let stringCoord = `Coordinates: X value: ${x} Y value: ${y}`;
+            let stringCoord = `Coordinates:<br> X value: ${x}<br> Y value: ${y}`;
             document.getElementById("text1").innerHTML = stringCoord;
-        
-      }
+
+            let userLang = navigator.language;
+            document.getElementById("text2").innerHTML = `User language: ${userLang}`;
+        }
+
+        /* TASK 12 */
+
+        if (navigator.geolocation) {
+
+            navigator.geolocation.getCurrentPosition(functionGeo);
+
+        } else {
+
+            document.getElementById("text3").innerHTML = "Geolocation is not supported by browser.";
+        }
+
+        function functionGeo(pos) {
+
+            document.getElementById("text3").innerHTML = "Latitude: " + pos.coords.latitude +
+                "<br>Longitude: " + pos.coords.longitude;
+        }
+
 
 
 
