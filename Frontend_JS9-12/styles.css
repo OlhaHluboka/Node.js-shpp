@@ -1,0 +1,83 @@
+.rightBlock {
+    height: 50px;
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    border: 2px solid rgb(41, 5, 85);
+    background-color: #0bc3ec;
+}
+
+
+.button {
+    background-color: #f46cd6;
+    border: 2px solid rgb(66, 65, 65);
+    border-radius: 30px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 10px;    
+    box-shadow: 0 -3px rgb(33, 87, 60) inset;
+   
+}
+
+.hidden {
+    visibility: hidden;
+
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+}
+
+.flex-container>button {
+    background-color: #f46cd6;
+    border: 2px solid rgb(66, 65, 65);
+    border-radius: 30px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px;
+    box-shadow: 0 -3px rgb(33, 87, 60) inset;
+}
+
+.flex-container1 {
+    display: flex;
+    justify-content:right;
+}
+
+.flex-container1>div {
+    padding: 10px;
+    margin: 10px;
+    background-color: #b0e3ee;   
+  
+}
+
+label {
+    font-family: 'Vollkorn', serif;
+    text-align: center;
+    font-size: 25px;
+    color: #420475;
+    font-weight: bold;
+}
+
+.flex-container2 {
+    display: flex;
+    justify-content: left;
+}
+
+
+.flex-container2>img {
+    height: 250px;
+    width: 150px;
+    margin: 10px;
+    visibility: hidden;
+   
+}
+
+

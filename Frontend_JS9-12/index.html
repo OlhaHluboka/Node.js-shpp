@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/3bcf7cbd65.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Gluten&family=Sedgwick+Ave+Display&family=Vollkorn&display=swap"
+        rel="stylesheet">
+    <title> Practice Frontend JS topics 9-12</title>
+</head>>
+
+<body onmousemove="showCoords(event)">
+
+    <div class="flex-container1" id="blocks">
+        <div class="rightBlock" id="Coord" > 
+            <p id="text1" style="text-align:center">
+                Coordinates
+            </p>
+        </div>
+        <div class="rightBlock" id="Lang"> </div>
+        <div class="rightBlock" id="Man"> </div>
+    </div>
+
+    <label> IMAGES </label> <br>
+    <textarea id="lst" name="list" rows="9" cols="20"></textarea>
+
+    <input type="submit" id="submt" value="Submit" class="button">
+
+    <div class="flex-container2" id="img">
+        <img src="grape.jpg" alt="Green grape" id="image1">
+        <img src="boat.jpg" alt="Boat to hot" id="image2">
+        <img src="radish.jpg" alt="radish" id="image3">
+        <img src="purse.jpg" alt="purse" id="image4">
+        <img src="cover.jpg" alt="cover" id="image5">
+        <img src="healthy.jpg" alt="healthy" id="image6">
+        <img src="jars.jpg" alt="jars" id="image7">
+        <img src="pumpkin.jpg" alt="pumpkin" id="image8">
+        <img src="snowmen.jpg" alt="snowmen" id="image9">
+
+    </div>
+
+    <script>
+
+        /* TASK 9 */
+
+        document.getElementById("submt").addEventListener("click", myFunction1);
+
+        function myFunction1() {
+            let text = document.getElementById("lst").value; // image1, image2 ...
+            let arrayOfImage = text.split('\n');
+
+            let iterator = arrayOfImage.values();
+
+            for (let value of iterator) {
+
+                document.getElementById(value).style.visibility = "visible";
+
+            }
+        }
+
+        /* TASK 10 */
+        function showCoords(evt) {
+
+            let x = evt.clientX;
+            let y = evt.clientY;
+
+            let stringCoord = `Coordinates: X value: ${x} Y value: ${y}`;
+            document.getElementById("text1").innerHTML = stringCoord;
+        
+      }
+
+
+
+    </script>
+
+</body>
+
+</html>
