@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/3bcf7cbd65.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
@@ -11,44 +12,41 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Gluten&family=Sedgwick+Ave+Display&family=Vollkorn&display=swap"
         rel="stylesheet">
-    <title> Practice Frontend JS 1-4</title>
+    <title> Practice Frontend JS topics 9-12</title>
 </head>>
 
-<body>
+<body onmousemove="showCoords(event)">
 
-    <div class="yellowBox" id="yB">
-    </div>
-    <div class="redBox" id="rB">
-    </div>
-
-    <div class="flex-container" id="rBtn">
-        <button id="rBB">Red Box Button</button>
-
-    </div>
-
-    <div class="redBox" id="gB" style="background-color: green; border: 2px solid green; height: 20px;
-    visibility: hidden;">
-    </div>
-
-    <div class="flex-container1" id="inpt">
-        <div style="background-color: white;">
-            <input type="text" id="userTxt" style="font-family: 'Vollkorn', serif; font-size: 25px; margin-top: 10px;">
+    <div class="flex-container1" id="blocks">
+        <div class="rightBlock" id="Coord">
+            <p id="text1" style="text-align:center; margin-top: auto;">
+                Coordinates
+            </p>
+        </div>
+        <div class="rightBlock" id="Lang">
+            <p id="text2" style="text-align:center; margin-top: auto;">
+                User language
+            </p>
         </div>
 
-    </div>
+        <div class="rightBlock" id="Man" onmousemove="functionGeo(pos)">
 
-    <div class="flex-container1" id="inpt1">
-        <div style="background-color: white; margin-top: -20px;">
-            <input type="text" id="href" style="font-family: 'Vollkorn', serif; font-size: 25px;">
-            <input type="submit" id="submt" value="Submit" class="button">
+            <p id="text3" style="text-align:center; margin-top: auto;">
+                Latitude & Longitude
+            </p>
         </div>
     </div>
 
-    <div class="flex-container2" id="img" >
+    <label> IMAGES </label> <br>
+    <textarea id="lst" name="list" rows="9" cols="20"></textarea>
+
+    <input type="submit" id="submt" value="Submit" class="button">
+
+    <div class="flex-container2" id="img">
         <img src="grape.jpg" alt="Green grape" id="image1">
         <img src="boat.jpg" alt="Boat to hot" id="image2">
         <img src="radish.jpg" alt="radish" id="image3">
-        <img src="purse.jpg" alt="purse" id="image4" >
+        <img src="purse.jpg" alt="purse" id="image4">
         <img src="cover.jpg" alt="cover" id="image5">
         <img src="healthy.jpg" alt="healthy" id="image6">
         <img src="jars.jpg" alt="jars" id="image7">
@@ -57,59 +55,57 @@
 
     </div>
 
-
     <script>
 
-        /* TASK 5 */
-        let x = document.getElementById("yB");
-        x.addEventListener("click", firstFunction);
-        x.addEventListener("click", secondFunction);
+        /* TASK 9 */
 
-        function firstFunction() {
-            alert("Hello World!");
-        }
-
-        function secondFunction() {
-            document.getElementById("yB").style.visibility = "hidden";
-        }
-
-        /* TASK 6 */
-
-        let event = document.getElementById("rBB");
-        event.addEventListener("mouseover", myFunction);
-        event.addEventListener("mouseout", mySecondFunction);
-
-        function myFunction() {
-            document.getElementById("rB").style.visibility = "hidden";
-        }
-
-        function mySecondFunction() {
-            document.getElementById("rB").style.visibility = "visible";
-        }
-
-        /* TASK 7 */
-
-        let event1 = document.getElementById("userTxt");
-        event1.addEventListener("mouseover", myFunction1);
-        event1.addEventListener("input", mySecondFunction1);
+        document.getElementById("submt").addEventListener("click", myFunction1);
 
         function myFunction1() {
-            document.getElementById("gB").style.visibility = "visible";
+            let text = document.getElementById("lst").value; // image1, image2 ...
+            let arrayOfImage = text.split('\n');
+
+            let iterator = arrayOfImage.values();
+
+            for (let value of iterator) {
+
+                document.getElementById(value).style.visibility = "visible";
+
+            }
         }
 
-        function mySecondFunction1() {
-            document.getElementById("gB").style.visibility = "hidden";
+        /* TASK 10 - 11 */
+        function showCoords(evt) {
+
+            let x = evt.clientX;
+            let y = evt.clientY;
+
+            let stringCoord = `Coordinates:<br> X value: ${x}<br> Y value: ${y}`;
+            document.getElementById("text1").innerHTML = stringCoord;
+
+            let userLang = navigator.language;
+            document.getElementById("text2").innerHTML = `User language: ${userLang}`;
         }
 
-        /* TASK 8 */
+        /* TASK 12 */
 
-        document.getElementById("submt").addEventListener("click", myFunction6);
+        if (navigator.geolocation) {
 
-        function myFunction6() {
-            let text = document.getElementById("href").value; // image1, image2
-            let elem = document.getElementById(text);
-            elem.style.visibility = "visible";
+            navigator.geolocation.getCurrentPosition(functionGeo);
+
+        } else {
+
+            document.getElementById("text3").innerHTML = "Geolocation is not supported by browser.";
         }
+
+        function functionGeo(pos) {
+
+            document.getElementById("text3").innerHTML = "Latitude: " + pos.coords.latitude +
+                "<br>Longitude: " + pos.coords.longitude;
+        }
+
+
+
 
     </script>
 
