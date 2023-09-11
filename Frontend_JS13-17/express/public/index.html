@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/3bcf7cbd65.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Gluten&family=Sedgwick+Ave+Display&family=Vollkorn&display=swap"
+        rel="stylesheet">
+    <title> Practice Frontend JS topics 13-17</title>
+</head>>
+
+<body>
+
+    <div class="flex-container1">
+        <div contenteditable="true" id="box1" oninput="functionFirstBox()">
+            <p id="txt1" class="label"> Input smth</p>
+        </div>
+
+        <div contenteditable="true" id="box2" oninput="functionSecondBox()">
+            <p id="txt2" class="label"> Input smth</p>
+        </div>
+
+        <div contenteditable="true" id="box3">
+            <p id="txt3" class="label"> Input smth</p>
+        </div>
+
+    </div>
+
+    <div class="flex-container1">
+        <input type="submit" id="submt1" value="Clear localStorage" class="button" onclick="localStorage.clear()">
+        <input type="submit" id="submt2" value="Clear cookies" class="button" onclick="deleteCookies()">
+        <input type="submit" id="submt3" value="Clear sessionStorage" class="button" onclick="localStorage.clear()">
+
+    </div>
+
+    <script>
+
+        /* TASK 13 */
+
+        /* ------Local storage------ */
+
+        function functionFirstBox() {
+
+            localStorage.setItem("myLocalStorage", document.getElementById("txt1").innerHTML); //write in localStorage
+        }
+
+        document.getElementById("txt1").addEventListener("load", functionDisplay());
+
+        function functionDisplay() {
+            if (localStorage.getItem("myLocalStorage") != null) {
+
+                document.getElementById("txt1").innerHTML = localStorage.getItem("myLocalStorage");
+            }
+
+        }
+
+        /*-------Cookies------*/
+
+        function deleteCookies() {
+            let cookies = document.cookie.split(";"); // array
+            for (let i = 0; i < cookies.length; i++) {
+                let cookie = cookies[i];
+                let indexPos = cookie.indexOf("="); // seek '='
+                let name = indexPos > -1 ? cookie.substr(0, indexPos) : cookie;
+                document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT;";
+                document.cookie = name + '=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+            }
+        }
+
+
+        function functionSecondBox() {
+
+            let element = document.getElementById("txt2").innerHTML;
+            document.cookie = `cont=${element}`;
+        }
+
+        document.getElementById("txt2").addEventListener("load", functionDisplay1());
+
+        function functionDisplay1() {
+
+            let arrayOfCookies = document.cookie.split("=");
+            let element = arrayOfCookies[1];
+
+            let indexPos1 = element.indexOf(";"); // seek ';'
+            let displayElement = indexPos1 > -1 ? element.substr(0, indexPos) : element;
+
+            document.getElementById("txt2").innerHTML = displayElement;
+            
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>
