@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/3bcf7cbd65.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Gluten&family=Sedgwick+Ave+Display&family=Vollkorn&display=swap"
+        rel="stylesheet">
+    <title> Practice Frontend JS topic 18</title>
+
+</head>>
+
+<body>
+
+    <div class="flex-container1">
+        <div id="area" ondragover="functionDragOver(event);" ondragleave="functionDragLeave(event);">
+            <input style="margin-top: 100px;" type="file" id="fl" onchange="functionInput(event)" />
+        </div>
+
+        <script>
+
+            /* TASK 18 */
+
+            function functionDragOver(e) {
+                document.getElementById("area").style.backgroundColor = "green";
+            }
+
+            function functionDragLeave(e) {
+                document.getElementById("area").style.backgroundColor = "blue";
+            }
+            
+            function functionInput(e) {
+                
+                document.getElementById("area").style.backgroundColor = "red";
+            }
+
+
+        </script>
+
+
+</body>
+
+</html>
