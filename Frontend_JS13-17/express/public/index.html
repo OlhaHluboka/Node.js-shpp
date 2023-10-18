@@ -66,6 +66,8 @@
             localStorage.setItem("myLocalStorage", document.getElementById("txt1").innerHTML); //write in localStorage
         }
 
+        // Event "load" is a page reload. After this the last user input can be in the box. 
+
         document.getElementById("txt1").addEventListener("load", functionDisplay());
 
         function functionDisplay() {
